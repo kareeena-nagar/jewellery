@@ -1,0 +1,600 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>               
+    
+      :root
+      {
+        --background-color:#fff ;
+        --color:#555;
+        --title:#000;
+      }
+      
+      .dark-mode{
+        --background-color:#000 ;
+        --title:#fff;
+      }  
+       
+      .blue-mode{
+        --background-color:#d4b9fb ;
+        
+        --title:#fff;
+      }  
+      .pink-mode{
+        --background-color:#edafc5;
+      
+        --title:#fff;
+      }  
+      body{
+        background-color: var(--background-color);
+        color: var(--color);
+        font-family: 'Courier New', Courier, monospace;
+        overflow-x: hidden;
+      }    
+      
+    
+      #toggle-btn{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: black;
+      }
+      #toggle-bt{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: rgb(247, 104, 128);
+      }#toggle-buttn{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: blue;
+      }
+    
+      .toggle{
+        display: inline-block;
+        background-color: darkgrey;
+        text-align: center;
+      }
+       
+    
+        .head {
+          background-image: url(images/slider-bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 550px;
+        }
+    
+        .btn a {
+          border: 1px solid rgb(252, 107, 54);
+          border-radius: 5px;
+          color: white;
+          padding: 10px;
+          margin: 0px;
+          text-decoration: none;
+          background-color: rgb(252, 107, 54);
+        }
+    
+        .btn:hover a {
+          background-color: white;
+          color: rgb(252, 107, 54);
+    
+        }
+    
+        .text {
+          width: 600px;
+          color: white;
+        }
+    
+        .new {
+          background-color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          text-align: center;
+        }
+    
+        .jell {
+          width: 260px;
+          height: 330px;
+          background-color: rgb(235, 234, 234);
+        }
+    
+        .jell span {
+          color: red;
+          float: right;
+        }
+    
+        .pic {
+          display: flex;
+          height: 245px;
+          padding: 15px, 30px;
+    
+          justify-content: center;
+          text-align: center;
+        }
+    
+        .pic img {
+          max-width: 100%;
+          max-height: 145px;
+        }
+    
+        .bil a {
+          text-align: center;
+          border: 1px solid rgb(252, 107, 54);
+          border-radius: 5px;
+          background-color: rgb(252, 107, 54);
+          padding: 10px;
+          margin: 0px;
+          text-decoration: none;
+          color: white
+        }
+    .textb{
+      color: #000;
+    }
+        .bil:hover a {
+          background-color: white;
+          color: rgb(252, 107, 54);
+          box-shadow: 2px 3px 5px rgb(252, 107, 54);
+        }
+    
+        .aimg::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 250px;
+          height: 250px;
+          background-color: #160e0b;
+        }
+    
+        .aimg img {
+          position: relative;
+          width: 100%;
+          transition: all ease 1s;
+    
+    
+        }
+    
+        .aimg:hover img {
+          scale: 0.8;
+    
+        }
+    
+        .ab .aimg {
+          position: relative;
+          padding: 25 0 0 25;
+        }
+    
+        .read a {
+          text-align: center;
+          border: 1px solid rgb(252, 107, 54);
+          border-radius: 5px;
+          width: 30px;
+          padding: 10px;
+          margin: 0px;
+          text-decoration: none;
+          background-color: rgb(252, 107, 54);
+          color: white
+        }
+    
+        .read:hover a {
+          background-color: white;
+          color: rgb(252, 107, 54);
+          box-shadow: 2px 3px 5px rgb(252, 107, 54);
+        }
+    
+        .atext {
+          margin-top: 70px;
+        }
+    
+        .shop .box1 {
+          position: relative;
+        }
+    
+        .shop .boxt {
+          position: absolute;
+          color: white;
+        }
+    
+        .box3 .boxt3 {
+          position: absolute;
+    
+          color: white;
+          top: 15px;
+          right: 0;
+          width: 100%;
+          height: 100%;
+    
+        }
+    
+        .boxt3 a {
+          text-decoration: none;
+          color: rgb(252, 107, 54);
+          background-color: transparent;
+          border: 1px solid rgb(252, 107, 54);
+          margin: 20px;
+          padding: 10px 40px;
+        }
+    
+    
+        .boxt a {
+          text-decoration: none;
+          color: rgb(252, 107, 54);
+          background-color: transparent;
+          border: 1px solid rgb(252, 107, 54);
+          margin: 20px;
+          padding: 10px 40px;
+        }
+    
+        .boxt:hover a {
+          background-color: rgb(252, 107, 54);
+          color: white;
+        }
+    
+        .boxt3:hover a {
+          background-color: rgb(252, 107, 54);
+          color: white;
+        }
+    
+        .box3 {
+          position: relative;
+        }
+    
+        .shop .box1 .boxt {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          color: #ffffff;
+          padding: 25px;
+          background-color: rgba(0, 0, 0, 0.15);
+    
+        }
+    
+    
+        .box3 img {
+          height: 202px;
+          width: 605px;
+          margin-top: 12px;
+        }
+    
+        .blog {
+          height: 630;
+          position: relative;
+        }
+    .from a {
+          text-decoration: none;
+          color: rgb(252, 107, 54);
+          background-color: transparent;
+          border: 1px solid rgb(252, 107, 54);
+        
+          padding: 10px 40px;
+          margin-top: 30px;
+        }
+     .from a:hover{
+      background-color: white;
+          color: rgb(252, 107, 54);
+          box-shadow: 2px 3px 5px rgb(252, 107, 54);
+        }
+    
+     
+        .bbox {
+          position: absolute;
+          content: '';
+          top: 360px;
+          bottom: 0;
+          left: 25;
+          width: 75px;
+          height: 75px;
+          border: 3px solid white;
+          background-color: black;
+          color: white;
+          text-align: center;
+        }
+    
+        .read a {
+          border: 1px solid black;
+          background-color: transparent;
+          text-align: center;
+          text-decoration: none;
+          color: black;
+          padding: 10px 40px;
+    
+        }
+    
+        .read:hover a {
+          background-color: black;
+          color: white;
+        }
+    
+        .carousel-item img {
+          width: 200px;
+          height: auto;
+          border-radius: 100%;
+          border: 4px solid black;
+        }
+    
+        .textc span {
+          color: rgb(254, 135, 16);
+          font-size: 50px;
+        }
+    
+        .sl {
+          background-color: black;
+          border-radius: 15px;
+          text-align: center;
+          color: white;
+        }
+    
+        .textc {
+          color: white;
+          text-align: center;
+        }
+    
+       
+        .email input{
+          width: 600px;
+          padding: 10px 20px;
+          border: 1px solid black;
+        position: relative;
+        }
+        .box{
+    width: 55px;
+    position: absolute;
+    display: inline-block;
+    height: 45px;
+    background-color: rgb(255, 106, 52);
+        }
+       
+        .bloga img{
+          width: 60px;
+          text-align: center;
+          background-color: white; 
+          padding: 5px 10px;
+        }
+          
+          .p4{
+            height: 50px;
+            width: 50px;
+            background-color: #ffffff;
+            margin: 10px 0;
+          } li{
+    line-height: 35px;
+    }
+    ul li:hover{
+      color: rgb(248, 126, 81);
+    }
+    @media screen and (max-width:997px){
+      .carousel-inner{
+    margin-left: 0;
+      }
+      .email input{
+        width: 500px;
+      }
+      .text{
+        width: 400px;
+      }
+      
+      
+      
+      
+      
+      }
+    
+        
+      </style>
+</head>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<body>
+  <div class="toggle" id="toggle-btn">
+            
+
+  </div>
+
+  <div class="toggle" id="toggle-bt">
+            
+
+  </div>
+  <div class="toggle" id="toggle-buttn">
+            
+
+  </div>
+ 
+  <div class="head">
+   
+    <div class="cantainer-fluid ">
+      <div class="h text-white" style="display: inline-block; ">
+        <h1>HEALET</h1>
+        <div class="from">
+          <a class="ft f-left" href="form.html">login</a>
+          </div>
+      </div>
+      <div class="nav" style="float: right;">
+       
+        <nav class="navbar text-decoration navbar-light rounded-pill ">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation" style="background-color: white;">
+              <span class="navbar-toggler-icon  " style="float: inline-end;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active  text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+  
+   <a class="nav-link text-white" href="about.html">about</a>
+                </li>
+                <li class="n-item">
+                  <a class="nav-link  text-white" href="blog.html">blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  text-white" href="#">contect</a>
+                </li>
+
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="inner mt-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="text">
+            <h1>Best Jewellery<br>
+              Collection</h1>
+            <p> Tenetur ipsa voluptatem nemo tempore odio accusantium hic minima quidem commodi est repellendus dolores
+              explicabo illo dolorum, praesentium voluptatibus libero aut magni.</p>
+
+            <div class="btn mt-5">
+              <a href="#">shop now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="ab ">
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-6 mt-5">
+    
+              <div class="aimg mb-5">
+                <img src="images/about-img.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-md-6  mb-5">
+    
+              <div class="atext ">
+                <h1>about us</h1>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, aliquid. Aliquam atque vero
+                  provident repellendus eligendi dolor! Facere, deseamet consectetur adipisicing elit. Impedit, vitae. Eius
+                  dolorum nam laudantium. Magnam illum placeat inventore non! Consectetur!
+                </p>
+                <div class="read">
+                  <a href="">read more</a>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <div class="footer mt-5 bg-dark pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 col-md-8">
+    
+    
+              <div class="email mt-5">
+                <input type="email" name="email" placeholder="enter or e-mail" id="">
+                <div class="box"></div>
+              </div>
+            </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6  text-white mt-5">
+                <ul type="none" >
+                  <li>
+                    <h2>menu</h2>
+                  </li>
+                  <li>home</li>
+                  <li>about</li>
+                  <li>shop</li>
+                  <li>blog</li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mb-3">
+                <div class="ab   text-white">
+                  <h2 class=" mb-3">instagram</h2>
+    
+                  <div class="bloga mb-2 d-flex ">
+                    <img src="images/p1.png" alt="" class="img-fluid">
+                    <p class="ms-2"> stop processing up toyour new loceter</p>
+                  </div>
+                  <div class="bloga  d-flex">
+                    <img src="images/p4.png" alt="" class="img-fluid">
+                    <p class="ms-2">stop processing up toyour new loceter</p>
+                  </div>
+    
+    
+    
+    
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 text-white mt-5 mb-3" style="line-height: 30px;">
+                <ul>
+                  <h2>about us</h2>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe delectus perferendis cumque optio
+                  eos eum iur
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mb-3 text-white">
+                <div class="con" style="line-height: 30px;">
+                <ul type="none">
+                  <li>
+                    <h2>contact us</h2>
+                  </li>
+    
+                  <li>location</li>
+                  <li>call +0463489658</li>
+                  <li>demp@gmail.com</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        let btn=document.getElementById('toggle-btn');
+        btn.onclick=function(){
+            document.body.classList.toggle('dark-mode')
+        }
+       var bt=document.getElementById('toggle-bt') ;
+        bt.onclick=function(){
+        document.body.classList.toggle('pink-mode')
+        }
+        var button=document.getElementById('toggle-buttn') ;
+       button.onclick=function(){
+           document.body.classList.toggle('blue-mode')
+    }
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
